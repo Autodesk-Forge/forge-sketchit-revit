@@ -74,7 +74,6 @@ Windows (use **Node.js command line** from Start menu)
     set FORGE_ACTIVITY_ID=<<YOUR DESIGN AUTOMATION ACTIVITY ID>>
     npm start
 
-Open the browser: [http://localhost:3000](http://localhost:3000).
 
 ### Start the app
 Open the browser: [http://localhost:3000](http://localhost:3000), 
