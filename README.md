@@ -79,35 +79,24 @@ Open the browser: [http://localhost:3000](http://localhost:3000),
 
 Steps to use the app
 
-
 ## Further Reading
 
 Documentation:
-- This sample is based on [Learn Forge Tutorial](https://github.com/Autodesk-Forge/learn.forge.viewhubmodels/tree/nodejs), please check details there about the basic framework if you are not familar. 
 
 - [Design Automation API](https://forge.autodesk.com/en/docs/design-automation/v3/developers_guide/overview/)
-- [BIM 360 API](https://developer.autodesk.com/en/docs/bim360/v1/overview/) and [App Provisioning](https://forge.autodesk.com/blog/bim-360-docs-provisioning-forge-apps)
 - [Data Management API](httqqqps://developer.autodesk.com/en/docs/data/v2/overview/)
 
 Desktop APIs:
 
 - [Revit](https://knowledge.autodesk.com/support/revit-products/learn-explore/caas/simplecontent/content/my-first-revit-plug-overview.html)
 
-## Troubleshooting
-
-After installing Github desktop for Windows, on the Git Shell, if you see a ***error setting certificate verify locations*** error, use the following:
-
-    git config --global http.sslverify "false"
-
-## Limitation
-- For Demo purpose, we only support **5** files to be upgraded as maximum
-- Only support upgrading to Revit 2019
-- Override is not implemented yet
-- Only support upgrade file from/to BIM360
 ## License
 
 This sample is licensed under the terms of the [MIT License](http://opensource.org/licenses/MIT). Please see the [LICENSE](LICENSE) file for full details.
 
 ## Written by
 
-Zhong Wu [@johnonsoftware](https://twitter.com/johnonsoftware), [Forge Partner Development](http://forge.autodesk.com)
+
+Jaime Rosales D. [![Twitter Follow](https://img.shields.io/twitter/follow/afrojme.svg?style=social&label=Follow)](https://twitter.com/AfroJme) 
+
+[Forge Partner Development](http://forge.autodesk.com)
