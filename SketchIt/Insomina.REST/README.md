@@ -1,13 +1,12 @@
 # Create App, Define Activity, Call the WorkItem
 
-
-# Description
+## Description
 Insomnia.REST workflow to create App, define activity, and call the WorkItem. 
 
 ## Setup
 `Before start with Design Automaiton workflow, I strongly recommend you to read throught all the details at` [Design Automation for Revit Documenation](https://forge.autodesk.com/en/docs/design-automation/v3),` and check the following steps if you already have basic understanding.`
 
-1. Download or update Insomnia.REST from [here](https://insomnia.rest).
+1. Download or update Insomnia.REST from [here](https://insomnia.rest/download).
 
 2. Create a Forge App. If you have already created a Forge App then you can skip this and proceed to the next step. 
 
@@ -22,7 +21,7 @@ which will need your input for the variable values (client ID, client Secret...)
 
 5. Select the environment and enter your [Forge App's](https://developer.autodesk.com/myapps) `Client ID` and `Client Secret`. This is used for authentication. In the environment variables give your app an easy to manage unique nickname.
 
-6. Compile and package the sample applications as noted [here](https://forge.autodesk.com/en/docs/design-automation/v3/tutorials/revit/step4-publish-appbundle/). You will need this to upload the app to Design Automation. Alternatively you may also download the packages from [FileUpgraderApp.zip](../PlugIn/FileUpgraderApp.zip).
+6. Compile and package the sample applications as noted [here](https://forge.autodesk.com/en/docs/design-automation/v3/tutorials/revit/step4-publish-appbundle/). You will need this to upload the app to Design Automation. Alternatively you may also download the packages from [SketchIt.zip](../Revit.Addin/SketchItApp/bundles/SketchIt.zip).
 
 7. Create a nickname for your Forge App.
 
@@ -30,7 +29,7 @@ which will need your input for the variable values (client ID, client Secret...)
 
 9. Publish your Design Automation activity.
 
-10. Prepare your input and output url. You need to upload an old version of revit file as input Url, you can use [Revit2014.rvt](./Revit2014.rvt) for test.
+10. Prepare your input and output url. 
 
 11. Post your Design Automation workitem.
 
@@ -45,8 +44,8 @@ Note that for all `workitems` kindly provide signed URL for the expected output 
 
 REST API documentation on Design Automation V3 can be found [here](https://forge.autodesk.com/en/docs/design-automation/v3/reference/http/).
 
+## Written by
 
-## Reference
+Jaime Rosales D. [![Twitter Follow](https://img.shields.io/twitter/follow/afrojme.svg?style=social&label=Follow)](https://twitter.com/AfroJme) 
 
-
-# Written by
+[Forge Partner Development](http://forge.autodesk.com)
