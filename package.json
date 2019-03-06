@@ -1,0 +1,61 @@
+{
+  "name": "sketch-it",
+  "version": "1.0.0",
+  "description": "Sketch It",
+  "main": "server/generated/main.js",
+  "scripts": {
+    "start": "node server/generated/main.js",
+    "postinstall": "npm run build",
+    "clean": "git clean -fxd",
+    "build": "npm run client-build && npm run server-build",
+    "watch": "npm run client-watch &  npm run server-watch",
+    "debug": "npm run watch & nodemon",
+    "client-build": "browserify -p [minifyify --no-map] -g browserify-css -t [ babelify --presets [ react env ] --plugins [ transform-class-properties transform-object-rest-spread ] ] www/entry/app.js -o www/generated/sketch_it_bundle.js",
+    "client-watch": "watchify   --debug -v              -g browserify-css -t [ babelify --presets [ react env ] --plugins [ transform-class-properties transform-object-rest-spread ] ] www/entry/app.js -o www/generated/sketch_it_bundle.js",
+    "server-build": "babel         --presets env --plugins transform-class-properties server/src --out-dir server/generated",
+    "server-watch": "babel --watch --presets env --plugins transform-class-properties server/src --out-dir server/generated"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "almost-equal": "1.1.0",
+    "base-64": "0.1.0",
+    "body-parser": "1.18.3",
+    "bootstrap": "4.1.3",
+    "classnames": "2.2.6",
+    "debounce": "1.2.0",
+    "ejs": "2.6.1",
+    "es6-promisify": "6.0.1",
+    "express": "4.16.4",
+    "forge-apis": "0.4.4",
+    "gl-matrix": "2.8.1",
+    "is-url": "1.2.4",
+    "jquery": "3.3.1",
+    "popper.js": "1.14.4",
+    "react": "16.6.0",
+    "react-dom": "16.6.0",
+    "react-redux": "5.1.0",
+    "redux": "4.0.1",
+    "redux-actions": "2.6.4",
+    "request": "2.88.0",
+    "serve-favicon": "2.5.0",
+    "shortid": "2.2.14",
+    "socket.io": "2.1.1",
+    "socket.io-client": "2.1.1"
+  },
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-plugin-transform-class-properties": "6.24.1",
+    "babel-plugin-transform-object-rest-spread": "6.26.0",
+    "babel-preset-env": "1.7.0",
+    "babel-preset-react": "6.24.1",
+    "babelify": "8.0.0",
+    "browserify": "16.2.3",
+    "browserify-css": "0.14.0",
+    "minifyify": "7.3.5",
+    "ngrok": "3.1.0"
+  }
+}
