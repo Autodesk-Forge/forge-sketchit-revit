@@ -3,7 +3,9 @@
 [![Node.js](https://img.shields.io/badge/Node.js-8.0-blue.svg)](https://nodejs.org/)
 [![npm](https://img.shields.io/badge/npm-4.0-blue.svg)](https://www.npmjs.com/)
 ![Platforms](https://img.shields.io/badge/Web-Windows%20%7C%20MacOS%20%7C%20Linux-lightgray.svg)
-[![Design-Automation](https://img.shields.io/badge/Design%20Automation-v3-green.svg)](http://developer.autodesk.com/)
+[![Design-Automation](https://img.shields.io/badge/Design%20Automation-v3-green.svg)](http://forge.autodesk.com/)
+
+[![Viewer](https://img.shields.io/badge/Viewer-v6.5-green.svg)](http://forge.autodesk.com/)
 
 
 ![Windows](https://img.shields.io/badge/Plugins-Windows-lightgrey.svg)
@@ -21,7 +23,7 @@ This NodeJS app demonstrates an end to end use case for external developers usin
 The sketcher is built using Redux with React and makes use of Flux architecture extensively.
 
 # Thumbnail
-![thumbnail](/public/res/thumbnail.png)
+![thumbnail](sketchitapp-demo.gif)
 
 
 # Main Parts of The Work
