@@ -1,0 +1,21 @@
+{
+  "baseUrl":"https://developer.api.autodesk.com",
+  "dasApiRoot":"https://developer.api.autodesk.com/da/us-east/v3",
+  "client_id": "",
+  "client_secret": "",
+  "dasNickName": "",
+  "dasApiToken": "",
+  "appBundleName": "SketchItApp",
+  "activityName": "",
+  "appBundleAlias": "dev",
+  "activityAlias": "dev",
+  "appBundleFormDataCredential": "",
+  "appBundleFormDataDate": "",
+  "appBundleFormDataKey": "",
+  "appBundleFormDataPolicy": "",
+  "appBundleFormDataSignature": "",
+  "appBundleFormDataToken": "",
+  "appBundleFormRedirect": "",
+  "appBundleUrl": "",
+  "workitemId": ""   
+}

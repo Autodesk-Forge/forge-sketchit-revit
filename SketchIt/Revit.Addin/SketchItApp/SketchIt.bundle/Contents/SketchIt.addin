@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="DBApplication">
+    <Name>SketchIt</Name>
+    <Assembly>.\SketchIt.dll</Assembly>
+    <AddInId>B69A15D3-48AA-4792-8502-CB48154EE0F9</AddInId>
+    <FullClassName>SketchIt.SketchItApp</FullClassName>
+    <Description>"SketchIt"</Description>
+    <VendorId>Autodesk</VendorId>
+    <VendorDescription>Autodesk, Inc, www.autodesk.com</VendorDescription>
+  </AddIn>
+</RevitAddIns>

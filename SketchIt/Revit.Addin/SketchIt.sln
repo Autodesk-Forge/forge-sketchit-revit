@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SketchIt", "SketchItApp\SketchIt.csproj", "{EFB263DA-A3C0-4789-9D73-F74351DCC26D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EFB263DA-A3C0-4789-9D73-F74351DCC26D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFB263DA-A3C0-4789-9D73-F74351DCC26D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFB263DA-A3C0-4789-9D73-F74351DCC26D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFB263DA-A3C0-4789-9D73-F74351DCC26D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {66192511-4D6A-4ECE-99AA-3FB6BC1DA3F1}
+	EndGlobalSection
+EndGlobal

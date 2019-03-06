@@ -9,7 +9,7 @@ class ForgeUtils {
   static DAS_URL          = 'https://developer.api.autodesk.com/da/us-east/v3';
   static CLIENT_ID        = process.env.FORGE_CLIENT_ID || '';
   static CLIENT_SECRET    = process.env.FORGE_CLIENT_SECRET || '';
-  static ACTIVITY_ID      = process.env.FORGE_ACTIVITY_ID || 'Revit.RvtIOSketchItActivity2018+prod';
+  static ACTIVITY_ID      = process.env.FORGE_ACTIVITY_ID || '';
   static AUTH_SCOPE       = ['data:write', 'data:create', 'data:read', 'bucket:read', 'bucket:update', 'bucket:create', 'bucket:delete', 'viewables:read', 'code:all'];
   static BUCKET_KEY       = process.env.FORGE_BUCKET_KEY || '';
   static HOOK_WORKFLOW    = NgrokUtils.isLocalUrl() ? 'local-sketchit-workflow-id' : 'fixed-sketchit-workflow-id';

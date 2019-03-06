@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ApplicationPackage>
+  <Components Description="SketchIt">
+    <RuntimeRequirements OS="Win64"
+                         Platform="Revit"
+                         SeriesMin="R2019"
+                         SeriesMax="R2019" />
+    <ComponentEntry AppName="SketchIt"
+                    Version="1.0.0"
+                    ModuleName="./Contents/SketchIt.addin"
+                    AppDescription="Sketches some walls and a floor."
+                    LoadOnCommandInvocation="False"
+                    LoadOnRevitStartup="True" />
+  </Components>
+</ApplicationPackage>

@@ -1,0 +1,659 @@
+{
+	"_type": "export",
+	"__export_format": 3,
+	"__export_date": "2019-03-06T22:24:30.310Z",
+	"__export_source": "insomnia.desktop.app:v6.3.2",
+	"resources": [
+		{
+			"_id": "wrk_d7f919c34c82455c93305b6280d8c1b4",
+			"created": 1551907819414,
+			"description": "",
+			"modified": 1551907819414,
+			"name": "SketchIt App",
+			"parentId": null,
+			"_type": "workspace"
+		},
+		{
+			"_id": "env_230605c04fd747a6926c1728ad93c27a",
+			"color": null,
+			"created": 1551907820035,
+			"data": {},
+			"isPrivate": false,
+			"metaSortKey": 1551907820035,
+			"modified": 1551910901324,
+			"name": "New Environment",
+			"parentId": "wrk_d7f919c34c82455c93305b6280d8c1b4",
+			"_type": "environment"
+		},
+		{
+			"_id": "jar_c055d6bcc9df4b6dae4c0d2d6f11e802",
+			"cookies": [
+				{
+					"creation": "2019-03-06T21:54:23.806Z",
+					"domain": "developer.api.autodesk.com",
+					"hostOnly": true,
+					"httpOnly": true,
+					"id": "5351723910900108",
+					"key": "PF",
+					"lastAccessed": "2019-03-06T21:54:23.806Z",
+					"path": "/",
+					"secure": true,
+					"value": "An4JvqRJdSH7LjShNyrARU"
+				}
+			],
+			"created": 1551907820038,
+			"modified": 1551909263811,
+			"name": "Default Jar",
+			"parentId": "wrk_d7f919c34c82455c93305b6280d8c1b4",
+			"_type": "cookie_jar"
+		},
+		{
+			"_id": "fld_6685d58f7c444080abdc6f59919b26f5",
+			"created": 1551908186520,
+			"description": "",
+			"environment": {},
+			"metaSortKey": -1551908186520,
+			"modified": 1551908204384,
+			"name": "RevitIO.SketchIt",
+			"parentId": "wrk_d7f919c34c82455c93305b6280d8c1b4",
+			"_type": "request_group"
+		},
+		{
+			"_id": "env_6951f68d1e4446018e757e572a8e9107",
+			"color": "#3458cb",
+			"created": 1551910848288,
+			"data": {
+				"activityAlias": "dev",
+				"activityName": "",
+				"appBundleAlias": "dev",
+				"appBundleFormDataCredential": "",
+				"appBundleFormDataDate": "",
+				"appBundleFormDataKey": "",
+				"appBundleFormDataPolicy": "",
+				"appBundleFormDataSignature": "",
+				"appBundleFormDataToken": "",
+				"appBundleFormRedirect": "",
+				"appBundleName": "SketchItAppInsomnia",
+				"appBundleUrl": "",
+				"baseUrl": "https://developer.api.autodesk.com",
+				"client_id": "",
+				"client_secret": "",
+				"dasApiRoot": "https://developer.api.autodesk.com/da/us-east/v3",
+				"dasApiToken": "",
+				"dasNickName": "",
+				"workitemId": ""
+			},
+			"isPrivate": false,
+			"metaSortKey": 1551910848288,
+			"modified": 1551910946824,
+			"name": "SketchIt-RevitIO-Env",
+			"parentId": "env_230605c04fd747a6926c1728ad93c27a",
+			"_type": "environment"
+		},
+		{
+			"_id": "req_3ff08202f8684c0bac0eab483e679300",
+			"authentication": {},
+			"body": {},
+			"created": 1551908186454,
+			"description": "",
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"name": "Authorization",
+					"value": "Bearer {{dasApiToken}}"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1551908186454,
+			"method": "DELETE",
+			"modified": 1551908186454,
+			"name": "Delete activity",
+			"parameters": [],
+			"parentId": "fld_6685d58f7c444080abdc6f59919b26f5",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{dasApiRoot}}/activities/{{activityName}}",
+			"_type": "request"
+		},
+		{
+			"_id": "req_4f396413f73a4b4ebd4a5208c6234248",
+			"authentication": {},
+			"body": {},
+			"created": 1551908186461,
+			"description": "",
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"name": "Authorization",
+					"value": "Bearer {{dasApiToken}}"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1551908186461,
+			"method": "DELETE",
+			"modified": 1551908186461,
+			"name": "Delete app bundle",
+			"parameters": [],
+			"parentId": "fld_6685d58f7c444080abdc6f59919b26f5",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{dasApiRoot}}/appbundles/{{appBundleName}}",
+			"_type": "request"
+		},
+		{
+			"_id": "req_496a68fcb4ae4de0a93c8d03ac638c2a",
+			"authentication": {},
+			"body": {},
+			"created": 1551908186466,
+			"description": "",
+			"headers": [
+				{
+					"name": "",
+					"value": ""
+				},
+				{
+					"name": "Authorization",
+					"value": "Bearer {{dasApiToken}}"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1551908186466,
+			"method": "GET",
+			"modified": 1551908186466,
+			"name": "Get list of activities",
+			"parameters": [],
+			"parentId": "fld_6685d58f7c444080abdc6f59919b26f5",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{dasApiRoot}}/activities",
+			"_type": "request"
+		},
+		{
+			"_id": "req_95c50c3a577f42f69d02bbf06554ecfc",
+			"authentication": {},
+			"body": {},
+			"created": 1551908186470,
+			"description": "",
+			"headers": [
+				{
+					"name": "",
+					"value": ""
+				},
+				{
+					"name": "Authorization",
+					"value": "Bearer {{dasApiToken}}"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1551908186470,
+			"method": "GET",
+			"modified": 1551908186470,
+			"name": "Get list of appbundles",
+			"parameters": [],
+			"parentId": "fld_6685d58f7c444080abdc6f59919b26f5",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{dasApiRoot}}/appbundles",
+			"_type": "request"
+		},
+		{
+			"_id": "req_71478f2ebdf64e769e003692bb34819b",
+			"authentication": {},
+			"body": {},
+			"created": 1551908186476,
+			"description": "",
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"name": "Authorization",
+					"value": "Bearer {{dasApiToken}}"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1551908186476,
+			"method": "GET",
+			"modified": 1551908186476,
+			"name": "07-Get Workitem status",
+			"parameters": [],
+			"parentId": "fld_6685d58f7c444080abdc6f59919b26f5",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{dasApiRoot}}/workitems/{{workitemId}}",
+			"_type": "request"
+		},
+		{
+			"_id": "req_791ada76960642d0b0bead5d58594ad0",
+			"authentication": {},
+			"body": {
+				"mimeType": "",
+				"text": "{\n  \"activityId\": \"{{dasNickName}}.{{activityName}}+{{activityAlias}}\",\n  \"arguments\": {\n    \"sketchItInput\": {\n      \"url\": \"data:application/json,{ 'walls': [ {'start': { 'x': -100, 'y': 100, 'z': 0.0}, 'end': { 'x': 100, 'y': 100, 'z': 0.0}}, {'start': { 'x': -100, 'y': 100, 'z': 0.0}, 'end': { 'x': 100, 'y': 100, 'z': 0.0}}, {'start': { 'x': 100, 'y': 100, 'z': 0.0}, 'end': { 'x': 100, 'y': -100, 'z': 0.0}}, {'start': { 'x': 100, 'y': -100, 'z': 0.0}, 'end': { 'x': -100, 'y': -100, 'z': 0.0}}, {'start': { 'x': -100, 'y': -100, 'z': 0.0}, 'end': { 'x': -100, 'y': 100, 'z': 0.0}}, {'start': { 'x': -500, 'y': -300, 'z': 0.0}, 'end': { 'x': -300, 'y': -300, 'z': 0.0}}, {'start': { 'x': -300, 'y': -300, 'z': 0.0}, 'end': { 'x': -300, 'y': -500, 'z': 0.0}}, {'start': { 'x': -300, 'y': -500, 'z': 0.0}, 'end': { 'x': -500, 'y': -500, 'z': 0.0}}, {'start': { 'x': -500, 'y': -500, 'z': 0.0}, 'end': { 'x': -500, 'y': -300, 'z': 0.0}}],'floors' : [ [{'x': -100, 'y': 100, 'z':0.0}, {'x': 100, 'y': 100, 'z': 0.0}, {'x': 100, 'y': -100, 'z': 0.0}, {'x': -100, 'y': -100, 'z': 0.0}], [{'x': -500, 'y': -300, 'z':0.0}, {'x': -300, 'y': -300, 'z': 0.0}, {'x': -300, 'y': -500, 'z': 0.0}, {'x': -500, 'y': -500, 'z': 0.0}] ]}\"\n    },\n    \"result\": {\n      \"verb\": \"put\",\n      \"url\": \"https://myWebsite/signed/url/to/sketchIt.rvt\"\n    }\n  }\n}\n"
+			},
+			"created": 1551908186480,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_f1731434cce5406287b982430465eb48",
+					"name": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_072cec84f0134e61b67399ec7f88ca21",
+					"name": "Authorization",
+					"value": "Bearer {{dasApiToken}}"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1551908186480,
+			"method": "POST",
+			"modified": 1551909942563,
+			"name": "06-Send Workitem",
+			"parameters": [],
+			"parentId": "fld_6685d58f7c444080abdc6f59919b26f5",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{dasApiRoot}}/workitems",
+			"_type": "request"
+		},
+		{
+			"_id": "req_05e7e9e17d98434a8bb5e175a7ee1ff1",
+			"authentication": {},
+			"body": {
+				"mimeType": "",
+				"text": "{\n    \"id\": \"{{activityAlias}}\",\n    \"version\": 1\n}"
+			},
+			"created": 1551908186485,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_65cad6e40a5f426a9ad569a44e87d595",
+					"name": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_9dd08bd1a6be4aefaacd3f6bf56762ad",
+					"name": "Authorization",
+					"value": "Bearer {{dasApiToken}}"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1551908186485,
+			"method": "POST",
+			"modified": 1551909713942,
+			"name": "05-Create activity alias",
+			"parameters": [],
+			"parentId": "fld_6685d58f7c444080abdc6f59919b26f5",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{dasApiRoot}}/activities/{{activityName}}/aliases",
+			"_type": "request"
+		},
+		{
+			"_id": "req_2d691ab05d554efeba418443a56693b8",
+			"authentication": {},
+			"body": {
+				"mimeType": "",
+				"text": "{\n\t\"id\": \"{{activityName}}\",\n\t\"commandLine\": [ \"$(engine.path)\\\\\\\\revitcoreconsole.exe /i $(args[rvtFile].path) /al $(appbundles[{{ appBundleName }}].path)\" ],\n\t\"parameters\": {\n      \"sketchItInput\": {\n         \"zip\": false,\n         \"ondemand\": false,\n         \"verb\": \"get\",\n         \"description\": \"SketchIt input parameters\",\n         \"required\": true,\n         \"localName\": \"SketchItInput.json\"\n      },\n      \"result\": {\n         \"zip\": false,\n         \"ondemand\": false,\n         \"verb\": \"put\",\n         \"description\": \"Results\",\n         \"required\": true,\n         \"localName\": \"sketchIt.rvt\"\n      }\n   },\n\t\"engine\": \"Autodesk.Revit+2019\",\n\t\"appbundles\": [ \"{{dasNickName}}.{{appBundleName}}+{{appBundleAlias}}\" ],\n\t\"description\": \"Creates walls and floors from an input JSON file.\"\n}"
+			},
+			"created": 1551908186490,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_6e2c74a067ca4561b77c0626c4554d73",
+					"name": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_b7465c6879d44ecbaa564a202298dcb8",
+					"name": "Authorization",
+					"value": "Bearer {{dasApiToken}}"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1551908186490,
+			"method": "POST",
+			"modified": 1551910747043,
+			"name": "04-Create activity",
+			"parameters": [],
+			"parentId": "fld_6685d58f7c444080abdc6f59919b26f5",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{dasApiRoot}}/activities",
+			"_type": "request"
+		},
+		{
+			"_id": "req_dc244c1877ba4bf28240a8e8c0888091",
+			"authentication": {},
+			"body": {
+				"mimeType": "",
+				"text": "{\n  \"version\": 1,\n  \"id\": \"dev\"\n}"
+			},
+			"created": 1551908186496,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_f26598ce6b8a476c935db243bd4b4d87",
+					"name": "",
+					"value": ""
+				},
+				{
+					"id": "pair_e7771d6f1d514b2e9de8c7739dc2a8ba",
+					"name": "Authorization",
+					"value": "Bearer {{dasApiToken}}"
+				},
+				{
+					"id": "pair_0d404a4a5d014461bc84843d06ea1fa0",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1551908186496,
+			"method": "POST",
+			"modified": 1551909666948,
+			"name": "03-Create a new app bundle alias",
+			"parameters": [],
+			"parentId": "fld_6685d58f7c444080abdc6f59919b26f5",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{dasApiRoot}}/appbundles/{{appBundleName}}/aliases",
+			"_type": "request"
+		},
+		{
+			"_id": "req_611a0824cd4b4794a250e986669d4835",
+			"authentication": {},
+			"body": {
+				"mimeType": "multipart/form-data",
+				"params": [
+					{
+						"disabled": false,
+						"name": "key",
+						"type": "text",
+						"value": "{{appBundleFormDataKey}}"
+					},
+					{
+						"disabled": false,
+						"name": "content-type",
+						"type": "text",
+						"value": "application/octet-stream"
+					},
+					{
+						"disabled": false,
+						"name": "policy",
+						"type": "text",
+						"value": "{{appBundleFormDataPolicy}}"
+					},
+					{
+						"disabled": false,
+						"name": "success_action_status",
+						"type": "text",
+						"value": "200"
+					},
+					{
+						"disabled": false,
+						"name": "x-amz-signature",
+						"type": "text",
+						"value": "{{appBundleFormDataSignature}}"
+					},
+					{
+						"disabled": false,
+						"name": "x-amz-credential",
+						"type": "text",
+						"value": "{{appBundleFormDataCredential}}"
+					},
+					{
+						"disabled": false,
+						"name": "x-amz-algorithm",
+						"type": "text",
+						"value": "AWS4-HMAC-SHA256"
+					},
+					{
+						"disabled": false,
+						"name": "x-amz-date",
+						"type": "text",
+						"value": "{{appBundleFormDataDate}}"
+					},
+					{
+						"disabled": false,
+						"name": "x-amz-server-side-encryption",
+						"type": "text",
+						"value": "AES256"
+					},
+					{
+						"disabled": false,
+						"name": "x-amz-security-token",
+						"type": "text",
+						"value": "{{appBundleFormDataToken}}"
+					},
+					{
+						"disabled": false,
+						"name": "success_action_redirect",
+						"type": "text",
+						"value": "{{appBundleFormRedirect}}"
+					},
+					{
+						"disabled": false,
+						"fileName": "",
+						"name": "file",
+						"type": "file"
+					}
+				]
+			},
+			"created": 1551908186501,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1551908186501,
+			"method": "POST",
+			"modified": 1551908186501,
+			"name": "02-Upload app bundle to Design Automation",
+			"parameters": [],
+			"parentId": "fld_6685d58f7c444080abdc6f59919b26f5",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{appBundleUrl}}",
+			"_type": "request"
+		},
+		{
+			"_id": "req_2347148e0f0d483da4d3cafef4b90978",
+			"authentication": {},
+			"body": {
+				"mimeType": "",
+				"text": "{\n\t\"id\": \"{{appBundleName}}\",\n\t\"engine\": \"Autodesk.Revit+2019\",\n\t\"description\": \"SketchIt appbundle based on Revit 2019\"\n}"
+			},
+			"created": 1551908186505,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_64043b771bcb4c0c8eb0e8939dabc003",
+					"name": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"id": "pair_3485a61ff1fd4b708554585d5dc58d4f",
+					"name": "Authorization",
+					"value": "Bearer {{dasApiToken}}"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1551908186505,
+			"method": "POST",
+			"modified": 1551909414894,
+			"name": "01-Create app bundle",
+			"parameters": [],
+			"parentId": "fld_6685d58f7c444080abdc6f59919b26f5",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{dasApiRoot}}/appbundles",
+			"_type": "request"
+		},
+		{
+			"_id": "req_668349b336e84d858744e46f8c57a133",
+			"authentication": {},
+			"body": {
+				"mimeType": "",
+				"text": "{\r\n\t\"nickname\": \"{{dasNickName}}\"\r\n}"
+			},
+			"created": 1551908186512,
+			"description": "",
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/json"
+				},
+				{
+					"name": "Authorization",
+					"value": "Bearer {{dasApiToken}}"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1551908186512,
+			"method": "PATCH",
+			"modified": 1551908186512,
+			"name": "Create nickname",
+			"parameters": [],
+			"parentId": "fld_6685d58f7c444080abdc6f59919b26f5",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{dasApiRoot}}/forgeapps/me",
+			"_type": "request"
+		},
+		{
+			"_id": "req_1259eed555034842ba78446504f37969",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/x-www-form-urlencoded",
+				"params": [
+					{
+						"disabled": false,
+						"name": "client_id",
+						"value": "{{client_id}}"
+					},
+					{
+						"disabled": false,
+						"name": "client_secret",
+						"value": "{{client_secret}}"
+					},
+					{
+						"disabled": false,
+						"name": "grant_type",
+						"value": "client_credentials"
+					},
+					{
+						"disabled": false,
+						"name": "scope",
+						"value": "code:all"
+					}
+				]
+			},
+			"created": 1551908186515,
+			"description": "",
+			"headers": [
+				{
+					"name": "Content-Type",
+					"value": "application/x-www-form-urlencoded"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1551908186515,
+			"method": "POST",
+			"modified": 1551908186515,
+			"name": "00-New token",
+			"parameters": [],
+			"parentId": "fld_6685d58f7c444080abdc6f59919b26f5",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{baseUrl}}/authentication/v1/authenticate",
+			"_type": "request"
+		},
+		{
+			"_id": "req_ddd572b3ec06424c87e9d2638a11984e",
+			"authentication": {},
+			"body": {},
+			"created": 1551909209580,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_47a42e8a375c4c0a84e8a2c61dac9e2c",
+					"name": "Authorization",
+					"value": "Bearer {{dasApiToken}}"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1551908186508.5,
+			"method": "GET",
+			"modified": 1551909240885,
+			"name": "Nickname",
+			"parameters": [],
+			"parentId": "fld_6685d58f7c444080abdc6f59919b26f5",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "{{dasApiRoot}}/forgeapps/me",
+			"_type": "request"
+		}
+	]
+}
