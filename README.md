@@ -22,13 +22,13 @@ This NodeJS app demonstrates an end to end use case for external developers usin
 
 The sketcher is built using Redux with React and makes use of Flux architecture extensively.
 
-# Thumbnail
+# How does it work?
 ![thumbnail](sketchitapp-demo.gif)
 
 
 # Main Parts of The Work
-1. Create a Revit Plugin to be used within AppBundle of Design Automation for Revit. Please check [PlugIn](./revit/README.md) 
-2. Create your App, upload the AppBundle, define your Activity and test the workitem with the Postman collection under [Postman Collection](./revit/PostmanCollection/) 
+1. Create a Revit Plugin to be used within AppBundle of Design Automation for Revit. Please check [PlugIn](./SketchIt/Revit.Addin/README.md) 
+2. Create your App, upload the AppBundle, define your Activity and test the workitem with [Insomnia Rest](./SketchIt/Insomnia.REST/README.md)  workflow.
 
 3. Create the Web App to call the workitem.
 
@@ -62,7 +62,7 @@ Mac OSX/Linux (Terminal)
     export FORGE_CLIENT_ID=<<YOUR CLIENT ID FROM DEVELOPER PORTAL>>
     export FORGE_CLIENT_SECRET=<<YOUR CLIENT SECRET>>
     export FORGE_BUCKET_KEY=<<YOUR UNIQUE BUCKET KEY>>
-    export FORGE_NICKNAME=<<YOUR DESIGN AUTOMATION NICKNAME>>
+    export FORGE_ACTIVITY_ID=<<YOUR DESIGN AUTOMATION ACTIVITY ID>>
     npm start
 
 Windows (use **Node.js command line** from Start menu)
@@ -71,7 +71,7 @@ Windows (use **Node.js command line** from Start menu)
     set FORGE_CLIENT_ID=<<YOUR CLIENT ID FROM DEVELOPER PORTAL>>
     set FORGE_CLIENT_SECRET=<<YOUR CLIENT SECRET>>
     set FORGE_BUCKET_KEY=<<YOUR UNIQUE BUCKET KEY>>
-    set FORGE_NICKNAME=<<YOUR DESIGN AUTOMATION NICKNAME>>
+    set FORGE_ACTIVITY_ID=<<YOUR DESIGN AUTOMATION ACTIVITY ID>>
     npm start
 
 Open the browser: [http://localhost:3000](http://localhost:3000).
@@ -79,7 +79,6 @@ Open the browser: [http://localhost:3000](http://localhost:3000).
 ### Start the app
 Open the browser: [http://localhost:3000](http://localhost:3000), 
 
-Steps to use the app
 
 ## Further Reading
 
