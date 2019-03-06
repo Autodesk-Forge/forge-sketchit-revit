@@ -8,13 +8,20 @@
 
 SketchIt is an application that creates walls and floors in a rvt file. It takes a JSON file that specifies the walls and floors to be created, and outputs a new rvt file.
 
-## Dependencies 
+# Setup
 
-This project was built in Visual Studio 2017. Download it [here](https://www.visualstudio.com/).
+## Prerequisites
 
-This sample references Revit 2018's `RevitAPI.dll`, [DesignAutomationBridge.dll](https://revitio.s3.amazonaws.com/documentation/DesignAutomationBridge.dll) for Revit 2018 and [Newtonsoft JSON framework](https://www.newtonsoft.com/json).
+1. **Visual Studio** 2017
+2. **Revit** 2019 required to compile changes into the plugin
+3. **7z zip** requires to create the bundle ZIP, [download here](https://www.7-zip.org/)
 
-In order to POST appbundles, activities, and workitems you must have credentials for [Forge](../Docs/Forge.md).
+## References
+
+This Revit plugin requires **RevitAPI** and **DesignAutomationBridge** references. The `Reference Path` option should point to the folder.
+
+![](./reference_path.png)
+
 
 ## Building SketchIt.sln
 
@@ -22,7 +29,7 @@ Clone this repository and open `SketchIt.sln` in Visual Studio.
 
 Right-click on References, then Add Reference and Browse for RevitAPI.dll (by default under _C:\Program Files\Autodesk\Revit 201x_ folder). Then right-click on this RevitAPI reference, go to Properties, then set Copy Local to False.
 
-Then right-click on the project, go to Manage NuGet Packages..., under Browser you can search for DesignAutomation.Revit and install Autodesk.Forge.DesignAutomation.Revit (choose the appropriate Revit version you need). Then search and install Newtonsoft.Json (which is used to parse input data in JSON format).
+Then right-click on the project, go to Manage NuGet Packages..., under Browser you can search for DesignAutomation.Revit and install _Autodesk.Forge.DesignAutomation.Revit_ (choose the appropriate Revit version you need). Then search and install _Newtonsoft.Json_ (which is used to parse input data in JSON format).
 
 Please check Include prerelease while searching for packages. Design Automation for Revit is in beta (as of Jan/2019). 
 
@@ -38,12 +45,12 @@ The `JSON` in your appbundle POST should look like this:
 ```json
 {
   "id": "SketchItApp",
-  "engine": "Autodesk.Revit+2018",
-  "description": "SketchIt appbundle based on Revit 2018"
+  "engine": "Autodesk.Revit+2019",
+  "description": "SketchIt appbundle based on Revit 2019"
 }
 ```
 Notes:
-* `engine` = `Autodesk.Revit+2018` - A list of engine versions can be found [here](https://forge.autodesk.com/en/docs/design-automation/v3/tutorials/revit/step4-publish-appbundle/#engine-version-aliases).
+* `engine` = `Autodesk.Revit+2019` - A list of engine versions can be found [here](https://forge.autodesk.com/en/docs/design-automation/v3/tutorials/revit/step4-publish-appbundle/#engine-version-aliases).
 
 After you upload the `appbundle` zip package, you should create an alias for this appbundle. The `JSON` in the POST should look like this:
 ```json
@@ -83,13 +90,13 @@ The `JSON` that accompanies the `activity` POST will look like this:
          "localName": "sketchIt.rvt"
       }
    },
-   "engine": "Autodesk.Revit+2018",
+   "engine": "Autodesk.Revit+2019",
    "appbundles": [ "YourNickname.SketchItApp+test" ],
    "description": "Creates walls and floors from an input JSON file."
 }
 ```
 Notes:
-*  `engine` = `Autodesk.Revit+2018` - A list of engine versions can be found [here](https://forge.autodesk.com/en/docs/design-automation/v3/tutorials/revit/step4-publish-appbundle/#engine-version-aliases).
+*  `engine` = `Autodesk.Revit+2019` - A list of engine versions can be found [here](https://forge.autodesk.com/en/docs/design-automation/v3/tutorials/revit/step4-publish-appbundle/#engine-version-aliases).
 *  `YourNickname` - The owner of appbundle `SketchItApp`. More information can be found [here](https://forge.autodesk.com/en/docs/design-automation/v3/tutorials/revit/step3-create-nickname/).
 
 Then you should create an alias for this activity. The `JSON` in the POST should look like this:
@@ -130,3 +137,12 @@ Notes:
 `SketchItActivity` expects an input file `SketchItInput.json`. The contents of the embedded JSON are stored in a file named `SketchItInput.json`, as specified by the `parameters` of `sketchItInput` in the activity `SketchItActivity`. The SketchIt application reads this file from current working folder, parses the JSON and creates walls and floors from the extracted specifications in a new created Revit file `sketchIt.rvt`, which will be uploaded to `url` you provide in the workitem.
 
 The function `SketchItFunc` in [SketchIt.cs](SketchItApp/SketchIt.cs) performs these operations.
+
+# Further Reading
+
+- [My First Revit Plugin](https://knowledge.autodesk.com/support/revit-products/learn-explore/caas/simplecontent/content/my-first-revit-plug-overview.html)
+- [Revit Developer Center](https://www.autodesk.com/developer-network/platform-technologies/revit)
+
+## License
+
+This sample is licensed under the terms of the [MIT License](http://opensource.org/licenses/MIT). Please see the [LICENSE](LICENSE) file for full details.
