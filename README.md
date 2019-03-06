@@ -85,7 +85,7 @@ Open the browser: [http://localhost:3000](http://localhost:3000),
 Documentation:
 
 - [Design Automation API](https://forge.autodesk.com/en/docs/design-automation/v3/developers_guide/overview/)
-- [Data Management API](httqqqps://developer.autodesk.com/en/docs/data/v2/overview/)
+- [Data Management API](https://developer.autodesk.com/en/docs/data/v2/overview/)
 
 Desktop APIs:
 
