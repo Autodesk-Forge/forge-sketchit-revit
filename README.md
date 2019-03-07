@@ -23,8 +23,7 @@ This NodeJS app demonstrates an end to end use case for external developers usin
 The sketcher is built using Redux with React and makes use of Flux architecture extensively.
 
 # How does it work?
-![thumbnail](sketchitapp-demo.gif)
-
+![thumbnail](thumbnail.gif) 
 
 # Main Parts of The Work
 1. Create a Revit Plugin to be used within AppBundle of Design Automation for Revit. Please check [PlugIn](./SketchIt/Revit.Addin/README.md) 
