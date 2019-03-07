@@ -52,7 +52,7 @@ Install [NodeJS](https://nodejs.org), version 8 or newer.
 
 Clone this project or download it (this `nodejs` branch only). It's recommended to install [GitHub desktop](https://desktop.github.com/). To clone it via command line, use the following (**Terminal** on MacOSX/Linux, **Git Shell** on Windows):
 
-    git clone -b nodejs https://github.com/jaimerosales/design.automation-nodejs-sketchIt.git
+    git clone git clone https://github.com/autodesk-forge/design.automation-nodejs-sketchIt.git
 
 To run it, install the required packages, set the enviroment variables with your Client ID, Secret, Bucket Key and Nickname value and finally start it. Via command line, navigate to the folder where this repository was cloned and use the following:
 
