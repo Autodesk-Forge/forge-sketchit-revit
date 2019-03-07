@@ -8,7 +8,7 @@ class NgrokUtils {
   };
 
   static isLocalUrl () {
-    return !process.env.THIS_URL;
+    return !process.env.FORGE_WEBHOOK_URL;
   };
 
   static init (port) {
@@ -19,7 +19,7 @@ class NgrokUtils {
   };
 
   static generateUrl (port) {
-    let url = process.env.THIS_URL;
+    let url = process.env.FORGE_WEBHOOK_URL;
     if (url)
       return Promise.resolve(url);
     return ngrok.connect(port);

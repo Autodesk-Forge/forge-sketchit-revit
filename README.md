@@ -63,6 +63,7 @@ Mac OSX/Linux (Terminal)
     export FORGE_CLIENT_SECRET=<<YOUR CLIENT SECRET>>
     export FORGE_BUCKET_KEY=<<YOUR UNIQUE BUCKET KEY>>
     export FORGE_ACTIVITY_ID=<<YOUR DESIGN AUTOMATION ACTIVITY ID>>
+    export FORGE_WEBHOOK_URL=<<YOUR DESIGN AUTOMATION FOR REVIT CALLBACK URL>>
     npm start
 
 Windows (use **Node.js command line** from Start menu)
@@ -72,6 +73,7 @@ Windows (use **Node.js command line** from Start menu)
     set FORGE_CLIENT_SECRET=<<YOUR CLIENT SECRET>>
     set FORGE_BUCKET_KEY=<<YOUR UNIQUE BUCKET KEY>>
     set FORGE_ACTIVITY_ID=<<YOUR DESIGN AUTOMATION ACTIVITY ID>>
+    set FORGE_WEBHOOK_URL=<<YOUR DESIGN AUTOMATION FOR REVIT CALLBACK URL>>
     npm start
 
 
