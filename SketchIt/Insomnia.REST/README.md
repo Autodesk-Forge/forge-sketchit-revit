@@ -10,7 +10,7 @@ Insomnia.REST workflow to create App, define activity, and call the WorkItem.
 
 2. Create a Forge App. If you have already created a Forge App then you can skip this and proceed to the next step. 
 
-3. From your local clone of the repository, import our `Insomnia data` [Sketchit-App_Insomnia](Sketchit-App_Insomnia.json) into the Insomnia REST application.  You can find more details about it [here](https://support.insomnia.rest/article/52-importing-and-exporting-data)
+3. From your local clone of the repository, import our `Insomnia data` [Sketchit-App_Insomnia](./SketchIt-App_Insomnia.json) into the Insomnia REST application.  You can find more details about it [here](https://support.insomnia.rest/article/52-importing-and-exporting-data)
 
  ![thumbnail](./insomnia-preview.png)
 
