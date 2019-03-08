@@ -27,11 +27,104 @@ which will need your input for the variable values (client ID, client Secret...)
 
 8. Publish your Design Automation appbundle.
 
+Create an `appbundle` zip package from the build outputs and publish the `appbundle` to Design Automation.
+
+The `JSON` in your appbundle POST should look like this:
+```json
+{
+  "id": "SketchItApp",
+  "engine": "Autodesk.Revit+2019",
+  "description": "SketchIt appbundle based on Revit 2019"
+}
+```
+Notes:
+* `engine` = `Autodesk.Revit+2019` - A list of engine versions can be found [here](https://forge.autodesk.com/en/docs/design-automation/v3/tutorials/revit/step4-publish-appbundle/#engine-version-aliases).
+
+After you upload the `appbundle` zip package, you should create an alias for this appbundle. The `JSON` in the POST should look like this:
+```json
+{
+  "version": 1,
+  "id": "test"
+}
+```
+
+> **The instructions for these steps and more about `appbundle` are [here](https://forge.autodesk.com/en/docs/design-automation/v3/tutorials/revit/step4-publish-appbundle/)**.
+
 9. Publish your Design Automation activity.
+
+Define an `activity` to run against the `appbundle`.
+
+The `JSON` that accompanies the `activity` POST will look like this:
+
+```json
+{
+   "id": "SketchItActivity",
+   "commandLine": [ "$(engine.path)\\\\revitcoreconsole.exe /al $(appbundles[SketchItApp].path)" ],
+   "parameters": {
+      "sketchItInput": {
+         "zip": false,
+         "ondemand": false,
+         "verb": "get",
+         "description": "SketchIt input parameters",
+         "required": true,
+         "localName": "SketchItInput.json"
+      },
+      "result": {
+         "zip": false,
+         "ondemand": false,
+         "verb": "put",
+         "description": "Results",
+         "required": true,
+         "localName": "sketchIt.rvt"
+      }
+   },
+   "engine": "Autodesk.Revit+2019",
+   "appbundles": [ "YourNickname.SketchItApp+test" ],
+   "description": "Creates walls and floors from an input JSON file."
+}
+```
+Notes:
+*  `engine` = `Autodesk.Revit+2019` - A list of engine versions can be found [here](https://forge.autodesk.com/en/docs/design-automation/v3/tutorials/revit/step4-publish-appbundle/#engine-version-aliases).
+*  `YourNickname` - The owner of appbundle `SketchItApp`. More information can be found [here](https://forge.autodesk.com/en/docs/design-automation/v3/tutorials/revit/step3-create-nickname/).
+
+Then you should create an alias for this activity. The `JSON` in the POST should look like this:
+```json
+{
+  "version": 1,
+  "id": "test"
+}
+```
+
+> **The instructions for these steps and more about `activity` are [here](https://forge.autodesk.com/en/docs/design-automation/v3/tutorials/revit/step5-publish-activity/)**.
 
 10. Prepare your input and output url. 
 
 11. Post your Design Automation workitem.
+
+Now POST a `workitem` against the `activity` to run a job on your `appbundle`.
+
+The `JSON` that accompanies the `workitem` POST will look like this:
+
+```json
+{
+  "activityId": "YourNickname.SketchItActivity+test",
+  "arguments": {
+    "sketchItInput": {
+      "url": "data:application/json,{ 'walls': [ {'start': { 'x': -100, 'y': 100, 'z': 0.0}, 'end': { 'x': 100, 'y': 100, 'z': 0.0}}, {'start': { 'x': -100, 'y': 100, 'z': 0.0}, 'end': { 'x': 100, 'y': 100, 'z': 0.0}}, {'start': { 'x': 100, 'y': 100, 'z': 0.0}, 'end': { 'x': 100, 'y': -100, 'z': 0.0}}, {'start': { 'x': 100, 'y': -100, 'z': 0.0}, 'end': { 'x': -100, 'y': -100, 'z': 0.0}}, {'start': { 'x': -100, 'y': -100, 'z': 0.0}, 'end': { 'x': -100, 'y': 100, 'z': 0.0}}, {'start': { 'x': -500, 'y': -300, 'z': 0.0}, 'end': { 'x': -300, 'y': -300, 'z': 0.0}}, {'start': { 'x': -300, 'y': -300, 'z': 0.0}, 'end': { 'x': -300, 'y': -500, 'z': 0.0}}, {'start': { 'x': -300, 'y': -500, 'z': 0.0}, 'end': { 'x': -500, 'y': -500, 'z': 0.0}}, {'start': { 'x': -500, 'y': -500, 'z': 0.0}, 'end': { 'x': -500, 'y': -300, 'z': 0.0}}],'floors' : [ [{'x': -100, 'y': 100, 'z':0.0}, {'x': 100, 'y': 100, 'z': 0.0}, {'x': 100, 'y': -100, 'z': 0.0}, {'x': -100, 'y': -100, 'z': 0.0}], [{'x': -500, 'y': -300, 'z':0.0}, {'x': -300, 'y': -300, 'z': 0.0}, {'x': -300, 'y': -500, 'z': 0.0}, {'x': -500, 'y': -500, 'z': 0.0}] ]}"
+    },
+    "result": {
+      "verb": "put",
+      "url": "https://myWebsite/signed/url/to/sketchIt.rvt"
+    }
+  }
+}
+```
+Notes:
+* `YourNickname` - The owner of activity `SketchItActivity`. More information can be found [here](https://forge.autodesk.com/en/docs/design-automation/v3/tutorials/revit/step3-create-nickname/).
+
+> **The instructions for this step and more about `workitem` are [here](https://forge.autodesk.com/en/docs/design-automation/v3/tutorials/revit/step6-post-workitem/)**.
+
+
 
 
 ## Usage
