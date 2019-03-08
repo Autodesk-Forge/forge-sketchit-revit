@@ -35,7 +35,7 @@ The sketcher is built using Redux with React and makes use of Flux architecture 
 
 ## Prerequisites
 
-For using this sample, you need an Autodesk developer credentials. Visit the [Forge Developer Portal](https://developer.autodesk.com), sign up for an account, then [create an app](https://developer.autodesk.com/myapps/create). For this new app, use **http://localhost:3000/api/forge/callback/oauth** as Callback URL, although is not used on 2-legged flow. Finally take note of the **Client ID** and **Client Secret**.
+For using this sample, you need an Autodesk developer credentials. Visit the [Forge Developer Portal](https://developer.autodesk.com), sign up for an account, then [create an app](https://developer.autodesk.com/myapps/create). For this new app, use `http://localhost:3000/api/forge/callback/oauth` as Callback URL, although is not used on 2-legged flow. Finally take note of the **Client ID** and **Client Secret**.
 
 1. **Forge Account**: Learn how to create a Forge Account, activate subscription and create an app at [this tutorial](http://learnforge.autodesk.io/#/account/). 
 2. **Visual Code**: Visual Code (Windows or MacOS).
@@ -77,7 +77,8 @@ Windows (use **Node.js command line** from Start menu)
 
 
 ### Start the app
-Open the browser: [http://localhost:3000](http://localhost:3000), 
+
+Open the browser: [http://localhost:3000](http://localhost:3000). Select the element to create (top-right buttons). Click on `Generate Revit Model`, wait until is ready to view.
 
 
 ## Further Reading

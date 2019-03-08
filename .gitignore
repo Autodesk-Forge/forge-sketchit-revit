@@ -6,6 +6,9 @@ yarn-debug.log*
 yarn-error.log*
 .vscode
 .DS_Store
+/server/generated
+/www/generated
+*.dll
 
 # Runtime data
 pids
@@ -393,6 +396,3 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
-
-server/generated
-www/generated/sketch_it_bundle.js
