@@ -1,4 +1,4 @@
-# design.automation-nodejs-sketchIt
+# Sketch on the browser and generate Revit models
 
 [![Node.js](https://img.shields.io/badge/Node.js-8.0-blue.svg)](https://nodejs.org/)
 [![npm](https://img.shields.io/badge/npm-4.0-blue.svg)](https://www.npmjs.com/)
